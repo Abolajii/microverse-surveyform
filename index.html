@@ -21,24 +21,45 @@
 
       <form id="survey-form">
         <div class="form-group">
-          <label for="name">Name</label>
-          <input class="form-input" type="text" id="name" />
+          <label for="name" id="name-label">Name </label>
+          <input
+            class="form-input"
+            type="text"
+            id="name"
+            required
+            placeholder="Enter a name"
+          />
         </div>
 
         <div class="form-group">
-          <label for="email">Email</label>
-          <input class="form-input" type="email" id="email" />
+          <label for="email" id="email-label">Email</label>
+          <input
+            class="form-input"
+            type="email"
+            id="email"
+            placeholder="Enter an email"
+            required
+          />
         </div>
 
         <div class="form-group">
-          <label for="age">Age <small>(optional)</small> </label>
-          <input min="10" max="100" class="form-input" type="number" id="age" />
+          <label for="age" id="number-label"
+            >Age <small>(optional)</small>
+          </label>
+          <input
+            min="10"
+            max="100"
+            class="form-input"
+            type="number"
+            id="number"
+            placeholder="Enter your age"
+          />
         </div>
 
         <div class="form-group">
           <p>Which option best describes your current role ?</p>
 
-          <select name="" id="">
+          <select name="" id="dropdown">
             <option disabled selected>Select current role</option>
             <option value="student">Student</option>
             <option value="fulltimejob">Full Time Job</option>
@@ -51,9 +72,14 @@
         <div class="form-group">
           <p>Would you recommend freeCodeCamp to a friend ?</p>
 
-          <div>
-            <input type="text" name="" id="" />
-          </div>
+          <form id="dropdown">
+            <input type="radio" name="definitely" id="" value="definitely" />
+            <label for="definitely">Definitely</label> <br />
+            <input type="radio" name="maybe" id="" value="maybe" />
+            <label for="maybe">Maybe</label> <br />
+            <input type="radio" name="notsure" id="" value="notsure" />
+            <label for="notsure">Not sure</label>
+          </form>
         </div>
       </form>
     </div>
